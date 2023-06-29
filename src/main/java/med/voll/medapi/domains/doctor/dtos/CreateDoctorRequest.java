@@ -1,4 +1,4 @@
-package med.voll.medapi.domains.doctor;
+package med.voll.medapi.domains.doctor.dtos;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import med.voll.medapi.domains.address.AddressDTO;
+import med.voll.medapi.domains.doctor.Specialty;
 
 public record CreateDoctorRequest(
         @NotBlank

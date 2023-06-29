@@ -19,4 +19,18 @@ public class Address {
         this.number = address.number();
         this.city = address.city();
     }
+
+    public void update(Address data) {
+        if (data.getCity() != null) {
+            this.city = data.getCity();
+        }
+
+        if (data.getNumber() != null) {
+            this.number = data.getNumber();
+        }
+
+        if (data.getStreet() != null) {
+            this.street = data.getStreet();
+        }
+    }
 }
