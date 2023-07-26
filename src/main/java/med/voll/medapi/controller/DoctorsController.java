@@ -35,7 +35,7 @@ public class DoctorsController {
     @GetMapping
     // O Pageable é responsável pela paginação.
     public ResponseEntity<Page<GetAllDoctorsResponse>> getAll(@PageableDefault(size = 10, sort = {"name"}) Pageable pagination) {
-         var response = repository.findAllByActiveTrue(pagination).map(GetAllDoctorsResponse::new);
+        var response = repository.findAllByActiveTrue(pagination).map(GetAllDoctorsResponse::new);
          return ResponseEntity.ok(response);
     }
     @PutMapping

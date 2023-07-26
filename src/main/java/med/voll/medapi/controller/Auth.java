@@ -17,12 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/login")
 public class Auth {
-
     @Autowired
     private AuthenticationManager manager;
     @Autowired
     private TokenService tokenService;
-
 
     @PostMapping
     public ResponseEntity authenticate(@RequestBody @Valid AuthenticateRequest data) {
