@@ -2,9 +2,6 @@
 
 API Rest do app de uma clinica médica (Voll Med)
 
-<!-- Inserir imagem com a #vitrinedev ao final do link -->
-![Imgur](#vitrinedev)
-
 ## Detalhes do projeto
 
 O desafio é desenvolver o backend do app de uma clinica médica, onde será possível cadastrar médicos, pacientes e agendar consultas
