@@ -1,4 +1,4 @@
-package med.voll.medapi.domains.appointment.validations;
+package med.voll.medapi.infra.validations;
 
 import med.voll.medapi.domains.appointment.dtos.createAppointmentDTO;
 

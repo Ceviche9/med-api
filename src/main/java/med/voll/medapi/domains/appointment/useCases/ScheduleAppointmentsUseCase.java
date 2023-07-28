@@ -3,7 +3,7 @@ package med.voll.medapi.domains.appointment.useCases;
 import med.voll.medapi.domains.appointment.Appointment;
 import med.voll.medapi.domains.appointment.AppointmentsRepository;
 import med.voll.medapi.domains.appointment.dtos.createAppointmentDTO;
-import med.voll.medapi.domains.appointment.validations.IScheduleValidation;
+import med.voll.medapi.infra.validations.IScheduleValidation;
 import med.voll.medapi.domains.doctor.Doctor;
 import med.voll.medapi.domains.doctor.DoctorsRepository;
 import med.voll.medapi.domains.patients.PatientsRepository;
@@ -39,9 +39,12 @@ public class ScheduleAppointmentsUseCase {
         var doctor = choseDoctor(data);
 
         validators.forEach(validator -> validator.validate(data));
+        System.out.println("Passei da validação");
 
         var appointment = new Appointment(null, doctor, patient, data.date());
         var response = appointmentsRepository.save(appointment);
+
+        System.out.println("Response " + response);
 
         return response;
     }
@@ -55,6 +58,7 @@ public class ScheduleAppointmentsUseCase {
             throw new AppError("The specialty is mandatory when the doctor is not chosen");
         }
 
+        System.out.println("Estou indo buscar um médico");
         return doctorsRepository.findAnyByAvailability(data.specialty(), data.date());
     }
 }

@@ -1,5 +1,6 @@
 package med.voll.medapi.domains.appointment;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -19,6 +20,7 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;

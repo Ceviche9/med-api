@@ -21,6 +21,11 @@ public class ErrorMiddleware {
         return ResponseEntity.badRequest().body(errors.stream().map(ValidationErrorResponse::new).toList());
     }
 
+    @ExceptionHandler(AppError.class)
+    public ResponseEntity businessRulesException(AppError ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
     private record ValidationErrorResponse(String field, String message) {
         public ValidationErrorResponse(FieldError erro) {
             this(erro.getField(), erro.getDefaultMessage());
