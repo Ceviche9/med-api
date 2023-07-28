@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class ScheduleAppointmentsUseCase {
@@ -39,12 +40,9 @@ public class ScheduleAppointmentsUseCase {
         var doctor = choseDoctor(data);
 
         validators.forEach(validator -> validator.validate(data));
-        System.out.println("Passei da validação");
 
         var appointment = new Appointment(null, doctor, patient, data.date());
         var response = appointmentsRepository.save(appointment);
-
-        System.out.println("Response " + response);
 
         return response;
     }
