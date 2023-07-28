@@ -38,6 +38,8 @@ public class ScheduleAppointmentsUseCase {
         var patient = patientsRepository.findById(data.patientId()).get();
 
         var doctor = choseDoctor(data);
+        System.out.println("Doctor " + doctor);
+        if(doctor == null) throw new AppError("There is no doctors available at this date");
 
         validators.forEach(validator -> validator.validate(data));
 
@@ -56,7 +58,6 @@ public class ScheduleAppointmentsUseCase {
             throw new AppError("The specialty is mandatory when the doctor is not chosen");
         }
 
-        System.out.println("Estou indo buscar um médico");
         return doctorsRepository.findAnyByAvailability(data.specialty(), data.date());
     }
 }
