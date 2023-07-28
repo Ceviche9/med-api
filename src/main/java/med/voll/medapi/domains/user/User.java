@@ -21,10 +21,12 @@ import java.util.List;
 public class User implements UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String username;
     private String password;
 
     public User(CreateUserRequest data) {
+        this.name = data.name();
         this.username = data.username();
         this.password = data.password();
     }
