@@ -22,7 +22,7 @@ Link para o quadro trello com as Features desenvolvidas: https://trello.com/b/MQ
 
 - [x] Criação de consulta com um médico de sua escolha ou qualquer médico de uma especialidade escolhida.
 
-### back-end
+### Tecnologias
 O back foi feito utilizando as tecnologias:
 
 - Spring Boot 3
