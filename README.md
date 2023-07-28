@@ -1,29 +1,29 @@
 # API Voll Med
 
-API Rest do app de uma clinica médica (Voll Med)
+Rest API for a medical clinic app (Voll Med)
 
-## Detalhes do projeto
+## 🏦 About the project
 
-O desafio é desenvolver o backend do app de uma clinica médica, onde será possível cadastrar médicos, pacientes e agendar consultas
+The challenge is to develop the backend for a medical clinic app, where it will be possible to register doctors, patients, and schedule appointments.
 
-## Documentação
+## 📃 Documentation
 
-Apos rodar o projeto acessar a rota: http://localhost:8080/swagger-ui/index.html
+After running the project, access the route: http://localhost:8080/swagger-ui/index.html
 
-## Features
+## 🗂 Features
 
-Link para o quadro trello com as Features desenvolvidas: https://trello.com/b/MQdpKVhj/api-voll-med
+- [x] Doctors registration
 
-- [x] Cadastro de médicos
+- [x] Doctors listing
 
-- [x] Listagem de médicos
+- [x] Patient registration
 
-- [x] Cadastro de paciente
+- [x] Appointment creation with a doctor of your choice or any doctor from a chosen specialty.
 
-- [x] Criação de consulta com um médico de sua escolha ou qualquer médico de uma especialidade escolhida.
 
-### back-end
-O back foi feito utilizando as tecnologias:
+## 🚀 Technologies
+
+The backend was built using the following technologies:
 
 - Spring Boot 3
 
@@ -38,3 +38,33 @@ O back foi feito utilizando as tecnologias:
 - Maven
 
 - Postman
+
+
+## 🤔 How to contribute
+
+**Make a fork of this repository**
+
+```bash
+# Fork using GitHub official command line
+# If you don't have the GitHub CLI, use the web site to do that.
+
+$ gh repo fork Ceviche9/med-api
+```
+
+**Follow the steps below**
+
+```bash
+# Clone your fork
+$ git clone your-fork-url && cd med-api
+
+# Create a branch with your feature
+$ git checkout -b my-feature
+
+# Make the commit with your changes
+$ git commit -m 'feat: My new feature'
+
+# Send the code to your remote branch
+$ git push origin my-feature
+```
+
+After your pull request is merged, you can delete your branch
