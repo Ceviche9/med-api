@@ -18,9 +18,9 @@ Link para o quadro trello com as Features desenvolvidas: https://trello.com/b/MQ
 
 - [x] Listagem de médicos
 
-- [x] Atualização de Médicos
+- [x] Cadastro de paciente
 
-- [x] Atualização de Médicos
+- [x] Criação de consulta com um médico de sua escolha ou qualquer médico de uma especialidade escolhida.
 
 ### back-end
 O back foi feito utilizando as tecnologias:
