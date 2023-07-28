@@ -6,6 +6,10 @@ API Rest do app de uma clinica médica (Voll Med)
 
 O desafio é desenvolver o backend do app de uma clinica médica, onde será possível cadastrar médicos, pacientes e agendar consultas
 
+## Documentação
+
+Apos rodar o projeto acessar a rota: http://localhost:8080/swagger-ui/index.html
+
 ## Features
 
 Link para o quadro trello com as Features desenvolvidas: https://trello.com/b/MQdpKVhj/api-voll-med
@@ -14,9 +18,9 @@ Link para o quadro trello com as Features desenvolvidas: https://trello.com/b/MQ
 
 - [x] Listagem de médicos
 
-- [x] Atualização de Médicos
+- [x] Cadastro de paciente
 
-- [x] Atualização de Médicos
+- [x] Criação de consulta com um médico de sua escolha ou qualquer médico de uma especialidade escolhida.
 
 ### back-end
 O back foi feito utilizando as tecnologias:
