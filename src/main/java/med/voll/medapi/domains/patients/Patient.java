@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.medapi.domains.doctor.Specialty;
+import med.voll.medapi.domains.patients.dtos.CreatePatientRequest;
 
 
 @Table(name = "patients")
@@ -17,15 +18,15 @@ import med.voll.medapi.domains.doctor.Specialty;
 public class Patient {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
     private String email;
     private Specialty specialty;
     private String doctor_id;
+    private String user_id;
 
     public Patient(CreatePatientRequest data) {
-        this.name = data.name();
         this.specialty = data.specialty();
         this.doctor_id = data.doctor_id();
         this.email = data.email();
+        this.user_id = data.user_id();
     }
 }

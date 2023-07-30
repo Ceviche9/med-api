@@ -5,13 +5,13 @@ import med.voll.medapi.domains.patients.Patient;
 
 public record CreatePatientResponse(
         Long id,
-        String name,
         String email,
         Specialty specialty,
-        String doctor_id
+        String doctor_id,
+        String user_id
 
 ) {
     public CreatePatientResponse(Patient patient) {
-        this(patient.getId(), patient.getName(), patient.getEmail(), patient.getSpecialty(), patient.getDoctor_id());
+        this(patient.getId(),patient.getEmail(), patient.getSpecialty(), patient.getDoctor_id(), patient.getUser_id());
     }
 }

@@ -6,7 +6,7 @@ import med.voll.medapi.domains.doctor.Doctor;
 import med.voll.medapi.domains.doctor.DoctorsRepository;
 import med.voll.medapi.domains.doctor.Specialty;
 import med.voll.medapi.domains.doctor.dtos.CreateDoctorRequest;
-import med.voll.medapi.domains.patients.CreatePatientRequest;
+import med.voll.medapi.domains.patients.dtos.CreatePatientRequest;
 import med.voll.medapi.domains.patients.Patient;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,6 @@ import org.springframework.test.context.ActiveProfiles;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 
 import static org.assertj.core.api.Assertions.assertThat;
