@@ -33,13 +33,11 @@ public class SecurityFilter extends OncePerRequestFilter {
         if (jwtToken != null ) {
             var subject = tokenService.getSubject(jwtToken);
             var user = usersRepository.findByUsername(subject);
-
             var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
             // Para informar ao spring que o usuário está logado.
             SecurityContextHolder.getContext().setAuthentication(authentication);
             request.setAttribute("userSubject", subject);
         }
-
 
         filterChain.doFilter(request, response);
     }
