@@ -16,6 +16,8 @@ After running the project, access the route: http://localhost:8080/swagger-ui/in
 
 - [x] Doctors listing
 
+- [x] Users registration
+
 - [x] Patient registration
 
 - [x] Appointment creation with a doctor of your choice or any doctor from a chosen specialty.
