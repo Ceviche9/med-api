@@ -29,6 +29,7 @@ public class User implements UserDetails {
         this.name = data.name();
         this.username = data.username();
         this.password = data.password();
+        // TODO: adicionar um campo email.
     }
 
     @Override

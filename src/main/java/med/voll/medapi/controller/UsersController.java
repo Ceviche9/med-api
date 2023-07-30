@@ -24,7 +24,8 @@ public class UsersController {
 
     @PostMapping
     public ResponseEntity create(@RequestBody @Valid CreateUserRequest data, UriComponentsBuilder uriBuilder) {
-        User user = new User(data.setPassword(BCrypt.hashpw(data.password(), BCrypt.gensalt())));
+        var hashedPassword = BCrypt.hashpw(data.password(), BCrypt.gensalt());
+        User user = new User(data.setPassword(hashedPassword));
         usersRepository.save(user);
 
         var uri = uriBuilder.path("/users/{id}").buildAndExpand(user.getId()).toUri();

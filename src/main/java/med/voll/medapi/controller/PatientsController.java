@@ -31,7 +31,7 @@ public class PatientsController {
         String username = (String) request.getAttribute("userSubject");
         var user = usersRepository.findByUsername(username);
         // TODO: Relacionar usuário com o paciente.
-        var patient = new Patient(data);
+        var patient = new Patient();
         patientsRepository.save(patient);
 
         var uri = uriBuilder.path("/patients/{id}").buildAndExpand(patient.getId()).toUri();
