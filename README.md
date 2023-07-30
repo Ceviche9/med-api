@@ -1,6 +1,6 @@
-# API Voll Med
+# Med-api
 
-Rest API for a medical clinic app (Voll Med)
+Med-api is a fictional medical clinic that needs an application for appointment management. The application should have functionalities that allow the registration of doctors and patients, as well as the scheduling and cancellation of appointments.
 
 ## 🏦 About the project
 
