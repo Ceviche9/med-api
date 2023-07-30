@@ -12,13 +12,8 @@ public record CreatePatientRequest(
         @NotNull
         Specialty specialty,
         @NotBlank
-        String doctor_id,
-        @NotBlank
         String user_id
 
 ) {
-        public CreatePatientRequest(CreatePatientUseCaseRequest data, String user_id) {
-                this(data.email(), data.specialty(), data.doctor_id(), user_id);
-        }
 
 }

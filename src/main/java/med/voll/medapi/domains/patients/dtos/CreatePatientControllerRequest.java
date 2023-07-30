@@ -10,9 +10,7 @@ public record CreatePatientControllerRequest(
         @Email
         String email,
         @NotNull
-        Specialty specialty,
-        @NotBlank
-        String doctor_id
+        Specialty specialty
 
 ) {
 }

@@ -18,7 +18,7 @@ public class CreatePatientUseCase {
 
     public Patient execute(CreatePatientUseCaseRequest data) {
         var user = usersRepository.getReferenceByUsername(data.username());
-        var patientData = new CreatePatientRequest(data, user.getId().toString());
+        var patientData = new CreatePatientRequest(data.email(), data.specialty(), user.getId().toString());
         var patient = new Patient(patientData);
         patientsRepository.save(patient);
 

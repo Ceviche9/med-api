@@ -4,5 +4,6 @@ public enum Specialty {
     ORTOPEDIA,
     CARDIOLOGIA,
     GINECOLOGIA,
-    DERMATOLOGIA
+    DERMATOLOGIA,
+    GERAL
 }

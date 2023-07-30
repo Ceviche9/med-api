@@ -20,12 +20,10 @@ public class Patient {
     private Long id;
     private String email;
     private Specialty specialty;
-    private String doctor_id;
     private String user_id;
 
     public Patient(CreatePatientRequest data) {
         this.specialty = data.specialty();
-        this.doctor_id = data.doctor_id();
         this.email = data.email();
         this.user_id = data.user_id();
     }

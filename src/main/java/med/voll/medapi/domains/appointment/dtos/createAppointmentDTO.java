@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 public record createAppointmentDTO(
         Long doctorId,
         @NotNull
-        Long patientId,
-        @NotNull
         @Future
         LocalDateTime date,
         Specialty specialty
